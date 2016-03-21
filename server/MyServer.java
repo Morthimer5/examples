@@ -81,12 +81,6 @@ public class MyServer  {
         return header;
     }
 
-    private void refrashResources(List<String> list){
-        list.clear();
-        for (File f : new File (contentDir).listFiles()) {
-            list.add(f.getName());
-        }
-    }
     private void sendResponse(String s, Socket socket) throws IOException {
         String response = "HTTP/1.1 200 OK\r\n" +
                 "Server: YarServer/2009-09-09\r\n" +
